@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sam Hughes</title>
+  <meta name="description" content="Get in touch with Sam Hughes about internship opportunities, projects, or collaborations." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">Sam Hughes</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2 style="margin-top: 24px;">Get in Touch</h2>
+      <p style="color: var(--muted);">
+        Looking for an Information Science intern, have a project to collaborate on, or just want to say hi?
+        Send me a message and I'll get back to you.
+      </p>
+
+      <!--
+        Contact form powered by Formspree (free for up to 50 submissions/month).
+        TO ACTIVATE:
+        1. Go to https://formspree.io and sign up with your email.
+        2. Create a new form. Formspree will give you an endpoint like:
+           https://formspree.io/f/abcdwxyz
+        3. Replace YOUR_FORM_ID below with the ID part (e.g., abcdwxyz).
+      -->
+      <form class="form" action="https://formspree.io/f/mvzbblak" method="POST">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <!-- Honeypot field to reduce spam (hidden from real users) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </div>
+      </form>
+
+      <div class="contact-alt">
+        <p>Prefer email? You can also reach me at <a href="mailto:hello@example.com">hughe451@msu.edu</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>&copy; <span id="year"></span> Sam Hughes. Built for MI 472.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
